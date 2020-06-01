@@ -1,0 +1,144 @@
+@import "config";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+}
+
+#person-1,
+#person-2 {
+  position: relative;
+  display: flex;
+  margin-top: 10rem;
+
+  //this is for slider button, speaker picture, and background picture
+  .slider-image {
+    order: 1;
+    z-index: 2;
+    position: relative;
+
+    .image {
+      position: relative;
+      .speaker {
+        position: absolute;
+        right: 5rem;
+        top: 5rem;
+      }
+    }
+
+    .slider {
+      position: absolute;
+      top: 36.5rem;
+      left: 15%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      border-radius: 3rem;
+      box-shadow: 0 4px 10px 5px #dcdcef;
+      background-color: #fff;
+      .btn {
+        width: 50px;
+        height: 65px;
+        border: none;
+        background-color: #fff;
+        border-radius: 3rem;
+      }
+      .btn:hover {
+        cursor: pointer;
+        background-color: red;
+      }
+    }
+  }
+
+  // this is for speaker's text, name and title
+  .slider-text {
+    order: 0;
+    margin-top: 10rem;
+    margin-left: 10rem;
+    background: url("images/pattern-quotes.svg") 15% top no-repeat;
+    padding-top: 3rem;
+    z-index: 3;
+    position: relative;
+
+    p {
+      color: $dark-color;
+      font-weight: 300;
+      line-height: 1.5em;
+      margin-right: -12rem;
+      margin-bottom: 2rem;
+    }
+
+    .author {
+      display: flex;
+      font-size: 1.5rem;
+
+      h4 {
+        margin-right: 1rem;
+      }
+
+      span {
+        font-weight: 300;
+        color: $light-color;
+      }
+    }
+
+    .curve-img {
+      position: absolute;
+      text-align: left;
+      left: -10rem;
+      top: 30rem;
+    }
+  }
+}
+
+//hide John's information
+#person-2 {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  #person-1,
+  #person-2 {
+    margin-top: 5rem;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+
+    .slider-image .slider {
+      bottom: 0.8rem;
+      left: 40%;
+    }
+    .slider-text {
+      order: 1;
+      width: 90%;
+      margin: 3rem auto;
+      margin-bottom: 0rem;
+      display: block;
+      text-align: center;
+      background-position: 50% top;
+      p {
+        width: 100%;
+      }
+      .curve-img {
+        text-align: left;
+        left: -3rem;
+        top: 20rem;
+      }
+      .author {
+        display: block;
+        line-height: 2rem;
+      }
+    }
+  }
+  .slider {
+    bottom: 0.8rem;
+    left: 40%;
+  }
+}
