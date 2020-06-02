@@ -126,14 +126,17 @@ body {
       p {
         width: 100%;
       }
-      .curve-img {
-        text-align: left;
-        left: -3rem;
-        top: 20rem;
-      }
       .author {
         display: block;
-        line-height: 2rem;
+        h4 {
+          margin-bottom: 1rem;
+        }
+      }
+      .curve-img {
+        position: relative;
+        text-align: left;
+        left: -3rem;
+        margin-top: -30rem;
       }
     }
   }

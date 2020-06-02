@@ -140,16 +140,20 @@ body {
   #person-2 .slider-text p {
     width: 100%;
   }
-  #person-1 .slider-text .curve-img,
-  #person-2 .slider-text .curve-img {
-    text-align: left;
-    left: -3rem;
-    top: 20rem;
-  }
   #person-1 .slider-text .author,
   #person-2 .slider-text .author {
     display: block;
-    line-height: 2rem;
+  }
+  #person-1 .slider-text .author h4,
+  #person-2 .slider-text .author h4 {
+    margin-bottom: 1rem;
+  }
+  #person-1 .slider-text .curve-img,
+  #person-2 .slider-text .curve-img {
+    position: relative;
+    text-align: left;
+    left: -3rem;
+    margin-top: -30rem;
   }
   .slider {
     bottom: 0.8rem;
